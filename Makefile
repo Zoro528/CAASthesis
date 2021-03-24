@@ -7,3 +7,6 @@ master:
 clean:
 	find . -name '*.aux' -print0 | xargs -0 rm -rf
 	rm -rf *.lof *.log *.lot *.out *.toc *.bbl *.blg *.thm
+
+clear:
+	del /S *.lof *.log *.lot *.out *.toc *.bbl *.blg *.thm *.brf *.aux
