@@ -25,9 +25,19 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{zhnumber}
+\usepackage{lipsum}
 
 \renewcommand\thechapter{第\zhnumber{\arabic{chapter}}章}
 \renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+\usepackage{xcolor}
+\renewcommand\headrule{\vskip-0.7\baselineskip\makebox[\textwidth]{\shadowfill}}
+\newcommand\shadowfill{%
+  \leavevmode\leaders\hbox{\ooalign{%
+                  \vrule height 2pt depth 0pt width 1pt\cr%
+  \textcolor{black}{\vrule height 3pt depth 1pt width 1pt}}%
+  }\hskip\fill\kern0pt%
+}
 
 \fancypagestyle{mainmatter}{
   \fancyhf{}
